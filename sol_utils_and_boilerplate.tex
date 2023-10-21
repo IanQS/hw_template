@@ -69,7 +69,7 @@
 
 \lhead{\small\assignmentClassCode} % Left header; output the instructor in brackets if one was set
 \chead{\small HW: \# \assignmentTitle} % Centre header
-\rhead{\small \studentName ( \studentNumber)} % Right header; output the author name if one was set, otherwise the due date if that was set
+\rhead{\small \studentName - \studentNumber} % Right header; output the author name if one was set, otherwise the due date if that was set
 
 \lfoot{} % Left footer
 \cfoot{\small Page\ \thepage\ of\ \pageref{LastPage}} % Centre footer
@@ -177,17 +177,19 @@
 	}
 }
 
+\newcommand{\codeword}{\texttt}
+
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\author{\textbf{\studentName} \textbf{\studentNumber} \ifdef{\studentID}{\studentID}{}} % Set the default title page author field
+\author{\textbf{\studentName} - \studentNumber \ifdef{\studentID}{ - \studentID}{}} % Set the default title page author field
 \date{} % Don't use the default title page date field
 
 \title{
 	\thispagestyle{empty} % Suppress headers and footers
 	\textbf{\classTitle}\\
-	\textbf{\assignmentClassCode:\ \assignmentTitle}\\[-4pt]
+	\textbf{\assignmentClassCode:\ HW \#\assignmentTitle}\\[-4pt]
 	\ifdef{\assignmentDueDate}{{\small Due\ on\ \assignmentDueDate}\\}{} % If a due date is supplied, output it
 	\ifdef{\assignmentClassInstructor}{{\large \textit{\assignmentClassInstructor}}}{} % If an instructor is supplied, output it
 }
