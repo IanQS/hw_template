@@ -149,14 +149,21 @@
 	\end{tcolorbox}
 }
 
-%------------------------------------------------
-
-% Command to print a box that breaks across pages with the space for a student to answer
-\newcommand{\answerbox}[1]{
+% Command to print a box that breaks across pages with the question answer
+\newcommand{\solution}[1]{
 	\begin{tcolorbox}[breakable, enhanced]
-		\vphantom{L}\vspace{\numexpr #1-1\relax\baselineskip} % \vphantom{L} to provide a typesetting strut with a height for the line, \numexpr to subtract user input by 1 to make it 0-based as this command is
+		#1
 	\end{tcolorbox}
 }
+
+
+% Command to print a box that breaks across pages with the question answer
+\newcommand{\sol}[1]{
+	\begin{tcolorbox}[breakable, enhanced]
+		#1
+	\end{tcolorbox}
+}
+
 
 %------------------------------------------------
 
